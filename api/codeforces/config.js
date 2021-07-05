@@ -12,6 +12,7 @@ methods = {
 	contestStatus: "contest.status",
 	problemSet: "problemset.problems",
 	problemSetRecentStatus: "problemset.recentStatus",
+	userStatus: "user.status",
 	userInfo: "user.info",
 	userRatedList: "user.ratedList",
 	userRating: "user.rating",

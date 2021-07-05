@@ -1,0 +1,185 @@
+{
+    "status": "OK",
+    "result": [
+        {
+            "id": 121286372,
+            "contestId": 525,
+            "creationTimeSeconds": 1625380690,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 525,
+                "index": "B",
+                "name": "Pasha and String",
+                "type": "PROGRAMMING",
+                "points": 750.0,
+                "rating": 1400,
+                "tags": [
+                    "constructive algorithms",
+                    "greedy",
+                    "math",
+                    "strings"
+                ]
+            },
+            "author": {
+                "contestId": 525,
+                "members": [
+                    {
+                        "handle": "Pranjal9415"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1427387400
+            },
+            "programmingLanguage": "GNU C++17 (64)",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 43,
+            "timeConsumedMillis": 46,
+            "memoryConsumedBytes": 1740800
+        },
+        {
+            "id": 121282844,
+            "contestId": 276,
+            "creationTimeSeconds": 1625377342,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 276,
+                "index": "B",
+                "name": "Little Girl and Game",
+                "type": "PROGRAMMING",
+                "points": 1000.0,
+                "rating": 1300,
+                "tags": [
+                    "games",
+                    "greedy"
+                ]
+            },
+            "author": {
+                "contestId": 276,
+                "members": [
+                    {
+                        "handle": "Pranjal9415"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1361719800
+            },
+            "programmingLanguage": "GNU C++17 (64)",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 51,
+            "timeConsumedMillis": 62,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 121277939,
+            "contestId": 1542,
+            "creationTimeSeconds": 1625371422,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1542,
+                "index": "B",
+                "name": "Plus and Multiply",
+                "type": "PROGRAMMING",
+                "points": 1250.0,
+                "rating": 1500,
+                "tags": [
+                    "constructive algorithms",
+                    "math",
+                    "number theory"
+                ]
+            },
+            "author": {
+                "contestId": 1542,
+                "members": [
+                    {
+                        "handle": "Pranjal9415"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1625317500
+            },
+            "programmingLanguage": "GNU C++17 (64)",
+            "verdict": "OK",
+            "testset": "TESTS",
+            "passedTestCount": 29,
+            "timeConsumedMillis": 343,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 121277697,
+            "contestId": 1542,
+            "creationTimeSeconds": 1625371073,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1542,
+                "index": "B",
+                "name": "Plus and Multiply",
+                "type": "PROGRAMMING",
+                "points": 1250.0,
+                "rating": 1500,
+                "tags": [
+                    "constructive algorithms",
+                    "math",
+                    "number theory"
+                ]
+            },
+            "author": {
+                "contestId": 1542,
+                "members": [
+                    {
+                        "handle": "Pranjal9415"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1625317500
+            },
+            "programmingLanguage": "GNU C++17 (64)",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 327,
+            "memoryConsumedBytes": 0
+        },
+        {
+            "id": 121277589,
+            "contestId": 1542,
+            "creationTimeSeconds": 1625370934,
+            "relativeTimeSeconds": 2147483647,
+            "problem": {
+                "contestId": 1542,
+                "index": "B",
+                "name": "Plus and Multiply",
+                "type": "PROGRAMMING",
+                "points": 1250.0,
+                "rating": 1500,
+                "tags": [
+                    "constructive algorithms",
+                    "math",
+                    "number theory"
+                ]
+            },
+            "author": {
+                "contestId": 1542,
+                "members": [
+                    {
+                        "handle": "Pranjal9415"
+                    }
+                ],
+                "participantType": "PRACTICE",
+                "ghost": false,
+                "startTimeSeconds": 1625317500
+            },
+            "programmingLanguage": "GNU C++17 (64)",
+            "verdict": "WRONG_ANSWER",
+            "testset": "TESTS",
+            "passedTestCount": 1,
+            "timeConsumedMillis": 312,
+            "memoryConsumedBytes": 0
+        }
+    ]
+}
