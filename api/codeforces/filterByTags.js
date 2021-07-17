@@ -25,6 +25,18 @@ const currentProbLevel = (contestName, index) => {
 	return false;
 };
 
+const currentTags = (tags) => {
+	let inc = ["dp"];
+	let exc = ["greedy"];
+	for (let tag of tags) {
+		if (exc.includes(tag)) return false;
+	}
+	for (let tag of tags) {
+		if (inc.includes(tag)) return true;
+	}
+	return false;
+};
+
 const processForNotion = async (probsForNotion, allSolved, addPage = false) => {
 	for (let prob of probsForNotion) {
 		// console.log(prob);
@@ -32,17 +44,18 @@ const processForNotion = async (probsForNotion, allSolved, addPage = false) => {
 			currentProbLevel(prob.contest, prob.index) &&
 			addPage === true &&
 			NUM_PROBS < 100 &&
+			currentTags(prob.tags) &&
 			allSolved.has(generateProbLink(prob.contestId, prob.index)) ===
 				false
 		) {
-			// console.log(prob);
+			console.log(prob);
 			NUM_PROBS++;
 			await createPages(prob);
 		}
 	}
 };
 
-const filterByDiv = async () => {
+const filterByTags = async () => {
 	let allContests = await pingCf(cf.methods.contestList);
 
 	// Just Search in the last 10 Contests
@@ -70,4 +83,4 @@ const filterByDiv = async () => {
 	}
 };
 
-module.exports = { filterByDiv: filterByDiv };
+module.exports = { filterByTags: filterByTags };

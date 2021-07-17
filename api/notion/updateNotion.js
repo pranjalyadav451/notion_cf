@@ -7,7 +7,7 @@ const { generateProbLink } = require("../codeforces/generateProbLink");
 
 // Init
 const notion = new Client({
-	auth: process.env.NOTION_TOKEN,
+	auth: process.env.NOTION_DP_TOKEN,
 });
 const createPages = async (probInfo) => {
 	let notionEntry = {
@@ -29,7 +29,7 @@ const createPages = async (probInfo) => {
 	console.log(notionEntry);
 	const response = await notion.pages.create({
 		parent: {
-			database_id: process.env.NOTION_DATABASE_ID,
+			database_id: process.env.NOTION_DP_DATABASE_ID,
 		},
 		properties: {
 			Name: {
@@ -67,19 +67,17 @@ const createPages = async (probInfo) => {
 const updateSolved = async () => {
 	let allAttempted = await pingCf(cf.methods.userStatus, {
 		handle: "Pranjal9415",
-		from: 1,
-		count: 3,
 	});
 	let solved = new Map();
 	for (let attempt of allAttempted) {
 		let probInfo = attempt.problem;
-		console.log(attempt);
+		// console.log(attempt);
 		let notion_id = generateProbLink(probInfo.contestId, probInfo.index);
-		console.log(notion_id);
+		// console.log(notion_id);
 		if (attempt.verdict === "OK") {
 			solved.set(notion_id, true);
 		}
 	}
-	console.log(solved);
+	return solved;
 };
 module.exports = { createPages: createPages, updateSolved: updateSolved };

@@ -3,7 +3,7 @@ const cf = require("./config");
 const { createPages, updateSolved } = require("../notion/updateNotion");
 const { generateProbLink } = require("./generateProbLink");
 
-async function getContestInfo(contestId, addPage = false) {
+async function getContestInfo(contestId) {
 	// Example -> https://codeforces.com/api/contest.standings?contestId=566&from=1&count=5&showUnofficial=true
 	queryParams = {
 		contestId: contestId,
@@ -12,10 +12,11 @@ async function getContestInfo(contestId, addPage = false) {
 		showUnofficial: false,
 	};
 	let contestInfo = await pingCf(cf.methods.contestStandings, queryParams);
-	console.log("Contest Info :", contestInfo);
+	let probsForNotion = [];
 	for (prob of contestInfo.problems) {
-		console.log(prob);
+		// console.log(prob);
 		let forNotion = {
+			contestId: prob.contestId,
 			contest: contestInfo.contest.name,
 			name: prob.name,
 			rating: prob.rating || 0,
@@ -23,8 +24,9 @@ async function getContestInfo(contestId, addPage = false) {
 			index: prob.index,
 			link: generateProbLink(contestId, prob.index),
 		};
-		console.log("forNotion", forNotion);
-		if (addPage === true) await createPages(forNotion);
+		// console.log("forNotion", forNotion);
+		probsForNotion.push(forNotion);
 	}
+	return probsForNotion;
 }
 module.exports = { getContestInfo: getContestInfo };
